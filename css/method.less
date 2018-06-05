@@ -1,0 +1,235 @@
+.transform-tras(@x,@y){
+    transform: translate(@x,@y);
+    -ms-transform:translate(@x,@y);
+    -webkit-transform:translate(@x,@y);
+}
+.transform-scale(@v){
+    transform: scale(@v);
+    -ms-transform:scale(@v);
+    -webkit-transform:scale(@v);
+}
+.transform(@v){
+    transform: @v;
+    -ms-transform:@v;
+    -webkit-transform:@v;
+}
+.transition(@time){
+    transition:all @time ease;
+    -webkit-transition:all @time ease;
+}
+.box-shadow (@style,@color:#000){
+    -webkit-box-shadow: @arguments;
+     -moz-box-shadow: @arguments;
+          box-shadow: @arguments;
+}
+.bor-radius(@x){
+    -webkit-border-radius: @arguments;
+     -moz-border-radius: @arguments;
+        border-radius: @arguments;
+}
+.rgba(@colour, @alpha)
+{
+    @alphaColour: hsla(hue(@colour), saturation(@colour), lightness(@colour), @alpha);
+    @ieAlphaColour: argb(@alphaColour);
+     
+    background-color: @colour; // Fallback for older browsers
+    background-color: @alphaColour; 
+    zoom: 1; // hasLayout
+    background-color: transparent\9;
+    -ms-filter:  "progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphaColour}, endColorstr=@{ieAlphaColour})"; // IE 8+
+        filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphaColour}, endColorstr=@{ieAlphaColour})"; // IE 6 & 7
+}
+.opacity (@opacity: 0.5) {
+  -webkit-opacity:  @opacity;
+  -moz-opacity:     @opacity;
+  opacity:    @opacity;
+}
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
+  -webkit-animation: @name @duration @delay @ease;
+  -moz-animation:    @name @duration @delay @ease;
+  -ms-animation:     @name @duration @delay @ease;
+}
+.dis(@v){
+  display: @v;
+}
+.fo-f(@v){
+  font-family: @v;
+}
+.fo-s(@v){
+  font-size: @v;
+}
+.bg(@v){
+  background: @v;
+}
+.bor(@v){
+  border: @v;
+}
+.z(@v){
+  z-index: @v;
+}
+.tex-a(@v){
+  text-align: @v;
+}
+.cur(@v){
+  cursor: @v;
+}
+.over(@v){
+  overflow: @v;
+}
+.pad (@v){
+  padding: @v;
+}
+.pad-l (@v){
+  padding-left: @v;
+}
+.pad-r (@v){
+  padding-right: @v;
+}
+.pad-t (@v){
+  padding-top: @v;
+}
+.pad-b (@v){
+  padding-bottom: @v;
+}
+.mar (@v){
+  margin: @v;
+}
+.mar-l (@v){
+  margin-left: @v;
+}
+.mar-r (@v){
+  margin-right: @v;
+}
+.mar-t (@v){
+  margin-top: @v;
+}
+.mar-b (@v){
+  margin-bottom: @v;
+}
+.tex-d (@v){
+  text-decoration: @v;
+}
+.tex-i(@v){
+  text-indent: @v;
+}
+.tex-trans(@v){
+  text-transform: @v;
+}
+.pad-lr(@l,@r){
+  padding-left: @l;
+  padding-right: @r;
+}
+.pad-tb(@t,@b){
+  padding-top: @t;
+  padding-bottom: @b;
+}
+.mar-lr(@l,@r){
+  margin-left: @l;
+  margin-right: @r;
+}
+.mar-tb(@t,@b){
+  margin-top: @t;
+  margin-bottom: @b;
+}
+.fl(@v){
+  float: @v;
+}
+.bgc(@v){
+  background-color: @v;
+}
+.bgp(@v){
+  background-position: @v;
+}
+.c(@v){
+  color: @v;
+}
+.lh(@v){
+  line-height: @v;
+}
+.dis(@v){
+  display: @v;
+}
+.pos(@v){
+  position: @v;
+}
+.t(@v){
+  top: @v;
+}
+.l(@v){
+  left: @v;
+}
+.r(@v){
+  right: @v;
+}
+.b(@v){
+  bottom: @v;
+}
+.tl(@t,@l){
+  top: @t;
+  left: @l;
+}
+.bl(@b,@l){
+  bottom: @b;
+  left: @l;
+}
+.tr(@t,@r){
+  top: @t;
+  right: @r;
+}
+.br(@b,@r){
+  bottom: @b;
+  right: @r;
+}
+.fo-w(@v){
+  font-weight: @v;
+}
+.bor(@v){
+  border: @v;
+}
+.bor-c(@v){
+  border-color:@v;
+}
+.bor-w(@v){
+  border-width: @v;
+}
+.bor-l(@v){
+  border-left: @v;
+}
+.bor-r(@v){
+  border-right: @v;
+}
+.bor-t(@v){
+  border-top: @v;
+}
+.bor-b(@v){
+  border-bottom: @v;
+}
+
+.w(@v){
+  width: @v;
+}
+.h(@v){
+  height: @v;
+}
+.max-w(@v){
+  max-width: @v;
+}
+.min-w(@v){
+  min-width: @v;
+}
+.max-h(@v){
+  max-height: @v;
+}
+.min-h(@v){
+  min-height: @v;
+}
+.wh(@a,@b){
+  width: @a;
+  height: @b;
+}
+.ver(@a){
+  vertical-align: @a;
+}
+.vis(@a){
+  visibility: @a;
+}
